@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Funktionell balans med Hov & Hälsa</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"><!--länkar till menyikonen på google fonts-->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/master.css"><!--ändra namn till master igen senare-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"><!--Länkar till ikoner från fontawsome-->
+    </head>
+    <body>
+        <nav class="topnav" id="theTopnav"><!--två klasser; 1)topnav 2)dropped; medan id't här är skapat för att identifiera topnaven till javascriptet-->
+            <ul>
+                <li><a href="#section1">Hov & Hälsa</a></li>
+                <li><a href="#section2">Behandlingar</a></li>
+                <li><a href="#section3">Produkter</a></li>
+                <li><a href="#section4">Om</a></li>
+                <li><a href="#section5">Kontakt</a></li>
+                <li><a href="#section6">Resedagbok</a></li>
+                <li><a href="javascript:void(0);" id="menu-logon" onclick="topNavToggle()">
+                    <i class="material-icons">menu</i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+
+            <header id="top"><!--lägger ett id på top för att ha någonstans att länka till från de olika sektionerna-->
+                <section id="section1" class="fullpager"> 
+                    <div class="centered-div">
+                        <h2>Är du och din häst i balans?</h2>
+                        <p>Vill du att ni ska uppnå bättre resultat tillsammans?<br>
+                        Jag kan hjälpa er nå dit!
+                        </p>
+                        <a href="#section2"><img src="icons/caret-down.png" alt="pil ned" class="caret-down-icon"></a>
+                    </div>
+                </section>
+            </header>
+
+            <main>
+                <section id="section2"> 
+                    <a href="#top" class="back-to-top">Överst</a> 
+                    <div class="wrapper">
+                        <div class="grid-container col-2"><!--class med grid-container OCH col-2 i detta fall. Separeras med mellanslag-->   
+                            <div class="grid-item">
+                                <h2>Behandlingar</h2>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet cum repudiandae quidem non modi. Laudantium placeat possimus quis consectetur ipsum quia a illum accusantium distinctio, natus minima doloremque laboriosam esse! Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat id quidem amet deleniti ducimus odit sint explicabo dolorum, ab tempora nemo dolore reprehenderit obcaecati quaerat animi iusto nulla repellendus excepturi?</p>
+                            </div><!--/ grid item-->
+
+                            <div class="grid-item">
+                                <a href="http://www.google.se" target="_blank">
+                                <img src="images/childandhorse.jpeg" alt="barn balanserar på häst utan att hålla i sig" class="img-fluid"></a>
+                            </div><!--/ .grid-item-->
+                        </div><!--/ .grid-container-->
+                    </div><!--/ .wrapper-->
+                        
+                </section>
+                
+                <section id="section3">
+                    <a href="#top" class="back-to-top">Överst</a>
+                    <div class="wrapper">
+                        <div class="grid-container col-2">
+                            <div class="grid-item">
+                                <h2>Produkter</h2>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet cum repudiandae quidem non modi. Laudantium placeat possimus quis consectetur ipsum quia a illum accusantium distinctio, natus minima doloremque laboriosam esse!</p>
+                                </div><!--/ .grid-item-->
+
+                                <div class="grid-item">
+                                    <a href="http://www.hov-halsa.se/" target="_blank">
+                                    <img src="images/horseandfoot.jpeg" alt="bild på hästhov och fot med sko" class="img-fluid"></a>
+                                </div><!--/ .grid-item-->
+                            </div><!--/ .grid-container-->
+                        </div><!-- / .wrapper-->
+                </section>
+
+                <section id="section4">
+                                <a href="#top" class="back-to-top">Överst</a> 
+                                <div class="wrapper">
+                                    <div class="centered-usp">
+                                        <p>KUNSKAP<br>
+                                            ENGAGEMANG<br>
+                                            GLÄDJE<br>
+                                        </p>
+                                    </div>
+                                
+                                    <blockquote>Jeanette har förbättrat samspelet mellan min häst och mig som ryttare!</blockquote>
+                                </div><!-- / .wrapper-->
+                                <a href="http://www.hov-halsa.se/" target="_blank">
+                                        <img src="images/horsebalance.jpeg" alt="Bild på Ryttare i gryning" class="img-wide">
+                                </a>
+                </section>
+
+                <section id="section5">
+                        <a href="#top" class="back-to-top">Överst </a> 
+                    <div class="wrapper">
+                        <div class="grid-container col-2">
+                                <div class="grid-item">
+                                    <h2>Kontakt och arbetsdistrikt</h2>
+                                    <p>Jag arbetar i södra Sverige; upp till Jönköping. Vill du veta om du befinner dig inom mitt distrikt är du välkommen att kontakta mig. Lorem upsum dolor sit, amet consectetur adipisicing elit. Eveniet cum repudiandae quidem non modi. Laudantium placeat possimus quis consectetur ipsum quia a illum accusantium distinctio, natus minima doloremque laboriosam esse!<p>
+                                </div><!--/ .grid-item-->
+
+                            <div class="grid-item">
+                                <a href="http://www.hov-halsa.se/" target="_blank">
+                                <img src="images/redhead.jpeg" alt="Bild på jeanette" class="img-fluid"></a>
+                                <p>Vill du veta mer, boka ett besök eller få mer info om något? Fyll i nedanstående formulär så kontaktar jag dig!</p>
+                                <form>
+                                    <form action="submit" method="get">
+                                        <label for="Name">Förnamn </label><br>
+                                        <input type="text" value="" name="Name"><br>
+                                        <label for="email">E-postadress </label><br>
+                                        <input type="text" value="" name="email"><br><br>
+                                        <select name="ämne">
+                                            <option value="välj">Välj ämne</option>
+                                            <option value="Behandling">Boka behandling</option>
+                                            <option value="Produkter">Produkter</option>
+                                            <option value="Distrikt">Distrikt</option>
+                                            <option value="Annat">Annat ämne</option>
+                                        </select><br><br>
+                                        <input type="submit" value="Skicka">
+                                        <form action="submit">
+                                    </form>
+                                </form>
+                            </div><!--/ .grid-item-->
+                        </div><!--/ .grid-container-->
+                    </div><!--/ . wrapper-->
+                </section>
+
+                <section id="section6">
+                    <a href="#top" class="back-to-top">Överst</a>
+                        <div class="wrapper">
+                            <h2>Senaste nytt från min resedagbok</h2>
+                            <p>Du kan följa mina arbetsresor och mitt arbete via facebook!</p>
+                                    <a href="https://www.facebook.com/hovhalsaisyd" target="_blank">
+                                    <img src="icons/facebook.png" alt="facebooklogo" class="img-centered img-fluid"></a>
+                        </div><!-- / .wrapper-->
+                </section>
+            </main>
+
+
+            <footer>
+                <small>Copyright &copy; 2018 Hov & Hälsa i Syd <br>Organisationsnr: 556032-8851 <br>Innehar F-skattsedel</small>
+            </footer>
+            <script>
+            /*Integrerat javascript i HTML-dok; med funktion som tar bort klass "dropped" på topnaven när användaren trycker på meny-ikonen*/
+            function topNavToggle() {
+                var x = document.getElementById("theTopnav"); /*I dokumentet, hämta HTML-elementet  med Id:t theTopnav och stoppa in det i variabeln X. X är nu lika med theTopnav.*/
+                if (x.className === "topnav") {
+                    x.className += " dropped";
+                } else{
+                    x.className = "topnav";
+                }
+            }
+            </script>
+    </body>
+</html>
+

@@ -1,0 +1,35 @@
+
+
+@charset "UTF-8";
+/* Coolors Exported Palette Redpalette - coolors.co/990000-085394-ffe599-783f04-e9f2f2 */
+/* HSL */
+/* RGB */
+/* ====== GLOBAL ====== */
+
+/*tillfällig borttagning av alla css-ändringar att aktivera igen senare======endast denna rad!
+
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 1em auto;
+  padding-top: 1 em;
+  padding-bottom: 10em;
+}
+
+h2 {
+  color: green;
+}
+
+.topnav {
+  background-color: rgba(0, 0, 0, 0.75);
+  /* transparant färg */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+

@@ -1,0 +1,235 @@
+/*import av google fonts allra överst i dokumentet; en webbfont*/
+
+
+
+/*=======HTML=========*/
+
+a {
+color: white;
+padding: 0;
+text-decoration: none; /*länkarna ska inte vara understrukna*/
+font-weight: bold; /*istället ska länkarna vara lite fetare*/
+}
+
+body {
+    margin-top: 6em; /*för att få ned innehållet under menytext*/
+    background-color: black;
+    color: white; /*berör all text i dokumentet*/
+    font-family: 'Libre+Franklin', sans-serif; /*font-family är typsnitt för all text i body*/
+}
+
+
+/*centrerad text i footern*/
+footer {
+    text-align: center;
+    padding: 5em 0; /*fyra rader uppe och nere - inget i sidorna.*/
+}
+
+
+/*===jag vill att texten ska ligga på bilden men ej ovanpå menyn!!=====*/
+blockquote {
+    font-size: 1em; /*standardradhöjd är oftast 16px*/
+    font-style: italic;
+    margin: 2em 0em;
+    position: absolute; 
+}
+
+/*för att placera citationstecken till varje blockquote på sidan*/
+blockquote:before {
+    content:'"';
+}
+blockquote:after {
+    content:'"';
+}
+
+
+/*===========CLASS; möjligt att använda flera ggr på olika ställen===*/
+
+.topnav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0em;
+}
+
+.topnav ul {
+    background-color: rgba(0, 0, 0, 0.85);
+    list-style: none; /*tar bort siffror eller punkter i en lista*/ 
+    position: absolute; /*Listan lyfts upp och all  html-kod skjuts bakom.*/
+    top: 0em; /*Här bestämmer jag exakt var den absoluta pos ska vara*/
+    left: 0em; 
+    right: 0em;
+    margin: 0;
+ }
+ 
+ /* visa alla listelement i nav på en linje*/
+.topnav ul li {
+    display: inline;
+    margin-left: 0;
+ }
+
+ 
+/*alla länkar i listelement som finns i ul i en nav ska vara lila*/
+.topnav ul li a {
+    color: purple;
+    padding: 1em;
+    text-decoration: none; /*länkarna ska inte vara understrukna*/
+    font-weight: bold; /*istället ska länkarna vara lite fetare*/
+    display: none
+}
+/*för att få länkarna understrukna när du hovrar över dem*/
+.topnav ul li a:hover {
+    background-color: plum;
+    text-decoration: underline;
+}
+
+ .topnav ul li:first-child > a { /*störreän-tecknet betyder att man enbart ska peka på första barnet i ul li*/
+     display: inline-block;
+ }
+
+ .topnav.dropped ul li a { /*pekar enbart på ett element med de två klasserna topnav & dropped*/
+    display: block; 
+ }
+
+ /*om det existerar ett element med två klasser och som innehåller #menu-logon*/
+ .topnav.dropped #menu-logon {
+position: absolute;
+right:0;
+top: 0;
+ }
+
+ /*=================================END TOPNAV===========================*/
+
+/*responsiva bilder*/
+.img-fluid {
+    max-width: 100%;
+    width: auto;
+    padding-bottom: 1em;
+}
+
+.img-wide {
+    max-width: 100%;
+    width: auto;
+}
+
+/*för att få section att fylla minst en viewport högt*/
+
+.fullpager {
+    min-height: 100vh /*vh = viewheight*/
+}
+
+.wrapper {
+    width: 80vw; /*80% av viewportens bredd*/
+    margin: auto; /*för att centrera wrappern; margin 0 (uppe och nere är noll, auto - betyder vänster och höger*/
+    padding-top: 1em
+}
+
+/*för att centrera allt som ligger innanför diven i översta section*/
+.centered-div {
+    position: absolute;
+    width: 100vw;
+    top: 50vh;
+    text-align: center;
+    transform: translateY(-50%); /*för att få centrering av divens höjd*/
+}
+
+.centered-usp {
+    text-align: center;
+    font-size: 6vw;
+    padding-bottom: auto; /*OBSOBSOBSOBS ----JAG FÅR INTE CENTRERINGEN TOP/BOTTOM RÄTT!!!!!!!!!*/
+   
+}
+
+.caret-down-icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /*för att horisontellcentreringen annars sker från övre vänstra hörnet på bilden.*/
+    bottom: 1em;
+    top: 25em;
+    max-width: 3em;
+}
+
+
+/*gap är marginal mellan grid item,  1fr är uppdelningen av kolumnbredd*/
+.grid-container {
+display: grid;
+grid-template-columns: 2, 1fr;
+}
+
+.grid-item {
+    padding: 0.5em; /*för innermarginal i kolumnerna*/
+}
+
+.back-to-top {
+font-style: none;
+float:right;
+margin-top: 1em;
+margin-right: 1em;
+font-weight: bold;
+}
+
+.img-centered {
+    display:block;
+    margin: 0 auto;
+}
+
+/*=============ID; unikt för en sak========olika bakgrundsfärg på de olika sektionerna*/
+#section1 {
+    background-color: black;
+}
+#section2 {
+    background-color: rgb(128, 128, 38);
+}
+#section3 {
+    background-color: maroon;
+}
+#section4 {
+    background-color: darkgrey;
+
+}
+#section5 {
+    background-color: darkblue;
+}
+
+#section6 {
+    background-color: purple
+}
+
+
+#menu-logon {
+    float:right;
+    display: block;
+}
+
+#material-icons {
+    font-size: 0.8em;
+}
+
+/*media query frågar om Media är lika med screen dvs skärm/dator eller print, med maximal bredd 600 pixlar gör då enligt regel (regler mellan måsvingarna) */
+
+/*LÄGG IN FLER BRYTPUNKTER I VIEWPORTENS BREDD!!!! OBSOBSOBSOBSOBS!!===============
+    */
+    
+@media screen and (min-width: 600px) {
+        .col-2 {
+    grid-template-columns: repeat(2, 1fr);
+        }
+
+        .col-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    
+        /*vad ska hända med wrapperns bredd när viewportens bredd överstiger 600px som angivet tidigare.*/
+        .wrapper{
+        width: 500px;
+        }
+
+    #menu-logon {
+        display: none;
+        }
+    .topnav ul li a{
+        display: inline-block /*för att behålla padding etc*/
+    }
+}
+    
+
